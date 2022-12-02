@@ -1,0 +1,30 @@
+C:\Users\Henry Gove\Documents\Coding Projects\Console Image File\C# Version\bin\Debug\net7.0\C# Version.exe
+C:\Users\Henry Gove\Documents\Coding Projects\Console Image File\C# Version\bin\Debug\net7.0\C# Version.deps.json
+C:\Users\Henry Gove\Documents\Coding Projects\Console Image File\C# Version\bin\Debug\net7.0\C# Version.runtimeconfig.json
+C:\Users\Henry Gove\Documents\Coding Projects\Console Image File\C# Version\bin\Debug\net7.0\C# Version.dll
+C:\Users\Henry Gove\Documents\Coding Projects\Console Image File\C# Version\bin\Debug\net7.0\C# Version.pdb
+C:\Users\Henry Gove\Documents\Coding Projects\Console Image File\C# Version\obj\Debug\net7.0\C# Version.csproj.AssemblyReference.cache
+C:\Users\Henry Gove\Documents\Coding Projects\Console Image File\C# Version\obj\Debug\net7.0\C# Version.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Henry Gove\Documents\Coding Projects\Console Image File\C# Version\obj\Debug\net7.0\C# Version.AssemblyInfoInputs.cache
+C:\Users\Henry Gove\Documents\Coding Projects\Console Image File\C# Version\obj\Debug\net7.0\C# Version.AssemblyInfo.cs
+C:\Users\Henry Gove\Documents\Coding Projects\Console Image File\C# Version\obj\Debug\net7.0\C# Version.csproj.CoreCompileInputs.cache
+C:\Users\Henry Gove\Documents\Coding Projects\Console Image File\C# Version\obj\Debug\net7.0\C# Version.dll
+C:\Users\Henry Gove\Documents\Coding Projects\Console Image File\C# Version\obj\Debug\net7.0\refint\C# Version.dll
+C:\Users\Henry Gove\Documents\Coding Projects\Console Image File\C# Version\obj\Debug\net7.0\C# Version.pdb
+C:\Users\Henry Gove\Documents\Coding Projects\Console Image File\C# Version\obj\Debug\net7.0\C# Version.genruntimeconfig.cache
+C:\Users\Henry Gove\Documents\Coding Projects\Console Image File\C# Version\obj\Debug\net7.0\ref\C# Version.dll
+C:\Users\Henry Gove\Documents\Coding Projects\Console Image File\csharp\bin\Debug\net7.0\C# Version.exe
+C:\Users\Henry Gove\Documents\Coding Projects\Console Image File\csharp\bin\Debug\net7.0\C# Version.deps.json
+C:\Users\Henry Gove\Documents\Coding Projects\Console Image File\csharp\bin\Debug\net7.0\C# Version.runtimeconfig.json
+C:\Users\Henry Gove\Documents\Coding Projects\Console Image File\csharp\bin\Debug\net7.0\C# Version.dll
+C:\Users\Henry Gove\Documents\Coding Projects\Console Image File\csharp\bin\Debug\net7.0\C# Version.pdb
+C:\Users\Henry Gove\Documents\Coding Projects\Console Image File\csharp\obj\Debug\net7.0\C# Version.csproj.AssemblyReference.cache
+C:\Users\Henry Gove\Documents\Coding Projects\Console Image File\csharp\obj\Debug\net7.0\C# Version.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Henry Gove\Documents\Coding Projects\Console Image File\csharp\obj\Debug\net7.0\C# Version.AssemblyInfoInputs.cache
+C:\Users\Henry Gove\Documents\Coding Projects\Console Image File\csharp\obj\Debug\net7.0\C# Version.AssemblyInfo.cs
+C:\Users\Henry Gove\Documents\Coding Projects\Console Image File\csharp\obj\Debug\net7.0\C# Version.csproj.CoreCompileInputs.cache
+C:\Users\Henry Gove\Documents\Coding Projects\Console Image File\csharp\obj\Debug\net7.0\C# Version.dll
+C:\Users\Henry Gove\Documents\Coding Projects\Console Image File\csharp\obj\Debug\net7.0\refint\C# Version.dll
+C:\Users\Henry Gove\Documents\Coding Projects\Console Image File\csharp\obj\Debug\net7.0\C# Version.pdb
+C:\Users\Henry Gove\Documents\Coding Projects\Console Image File\csharp\obj\Debug\net7.0\C# Version.genruntimeconfig.cache
+C:\Users\Henry Gove\Documents\Coding Projects\Console Image File\csharp\obj\Debug\net7.0\ref\C# Version.dll

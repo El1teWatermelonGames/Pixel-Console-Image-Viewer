@@ -95,9 +95,9 @@ def main():
 
     # Ensure it is a valid file format and if it is a Print As Text file (pat.)
     if fp.endswith(".pci"):
-        if fp.startswith("pat."): 
+        if fp.startswith("-pat "): 
             patfile = True
-            for i in range(4): fp = fp.lstrip(fp[0])
+            for i in range(5): fp = fp.lstrip(fp[0])
         # Process the data to an image
         out = processLines(fp) # Fetch the data and format into a list
         out = processPixel(out, patfile) # Convert each value into the color needed

@@ -1,0 +1,21 @@
+cpp:
+
+1 - Run "make build" 
+2 - Run "./pixel-console-renderer"
+
+Optional - To remove built file run "make clean"
+
+
+csharp:
+
+1 - Run "dotnet run"
+
+
+Python:
+
+1 - Run "python3 main.py"
+
+
+rust:
+
+1 - Run "cargo run"
