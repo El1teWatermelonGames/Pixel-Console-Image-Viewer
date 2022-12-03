@@ -136,6 +136,7 @@ def main():
         out = processPixel(out, patfile) # Convert each value into the color needed
 
         # Output each section of the array on individual lines
+        clearConsole()
         printImage(out)
         input("\nPress enter to close window...")
     else:
