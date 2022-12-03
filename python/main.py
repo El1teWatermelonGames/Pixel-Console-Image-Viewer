@@ -106,6 +106,7 @@ def appendPixel(char, outChar):
     elif char == "D": out = CBMAGENTA
     elif char == "E": out = CBCYAN
     elif char == "F": out = CBWHITE
+    elif char == " ": out = CEND
     else:
         print(f"Invalid char in image file: {char}")
         exit(1)
@@ -136,6 +137,7 @@ def main():
 
         # Output each section of the array on individual lines
         printImage(out)
+        input("\nPress enter to close window...")
     else:
         print("Not a valid file format! Please use a Pixel Console Image file (.pci)")
 
