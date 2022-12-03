@@ -26,7 +26,7 @@ To create a file just make a file with any name with the .pci file extension. Th
 
 ## How to render an image
 
-To render an image place the .pci file inside the same directory as the renderer (this applies to **all** versions of the program unless specified). Once you run the render just enter the image file's name. You can render the image with the color code printed over the image by writing "pat." infront of the file.
+To render an image place the .pci file inside the same directory as the renderer (this applies to **all** versions of the program unless specified). Once you run the render just enter the image file's name. You can render the image with the color code printed over the image by writing "-pat " in front of the file.
 
 ## All versions of the program
 

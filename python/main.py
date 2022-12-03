@@ -48,20 +48,20 @@ def clearConsole():
         system("clear")
 
 def processLines(image):
-    image = open(image, 'r')
+    image = open(image, 'r') # Open the image file
     data = []
     for line in image:
-        data.append(line.replace("\n", ""))
+        data.append(line.replace("\n", "")) # Remove \n character from start of line and add the line to the list
     image.close()
     return data
 
 def processPixel(data, patfile):
     out = []
-    for line in data:
+    for line in data: # Cycle through each line of data
         newLine = ""
-        for char in line:
-            if patfile == False: char = char.replace(char, appendPixel(char, "  "))
-            if patfile == True: char = char.replace(char, appendPixel(char, char+" "))
+        for char in line: # Cycle through character
+            if patfile == False: char = char.replace(char, appendPixel(char, "  ")) # Normal image processing
+            if patfile == True: char = char.replace(char, appendPixel(char, char+" ")) # Pat file processing
             newLine += char
         out.append(newLine)
     return out
@@ -84,7 +84,6 @@ def appendPixel(char, outChar):
     elif char == "D": out = CBMAGENTA
     elif char == "E": out = CBCYAN
     elif char == "F": out = CBWHITE
-    elif char == " ": return "   "
     else:
         print(f"Invalid char in image file: {char}")
         exit(1)
@@ -98,7 +97,7 @@ def main():
     fp = str(input("Enter the name of the image: "))
     patfile = False
 
-    # Ensure it is a valid file format and if it is a Print As Text file (pat.)
+    # Ensure it is a valid file format and account if the image is patted
     if fp.endswith(".pci"):
         if fp.startswith("-pat "): 
             patfile = True
