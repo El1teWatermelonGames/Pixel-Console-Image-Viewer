@@ -2,6 +2,26 @@ from os import name, system
 
 system("") # init terminal
 
+# ----- Splashscreen Image -----
+splashScreen = [
+    "0066611111133300",
+    "0666611111133330",
+    "6666611111133333",
+    "6666611111133333",
+    "4444455555522222",
+    "4000455005520002",
+    "4040450550522022",
+    "4000450555522022",
+    "4044450555522022",
+    "4044450550522022",
+    "4044455005520002",
+    "4444455555522222",
+    "6666611111133333",
+    "6666611111133333",
+    "0666611111133330",
+    "0066611111133300",
+]
+
 # Uses hexadecimal color system (16 colors to pick from)
 
 # 0 | BLACK
@@ -94,7 +114,13 @@ def appendPixel(char, outChar):
 
 # ----- Front-end -----
 
+def printImage(imageData):
+    for line in imageData:
+        print(line)
+
 def main():
+    printImage(processPixel(splashScreen, False))
+
     # Get the file name/path and ensure it is valid
     fp = str(input("Enter the name of the image: "))
     patfile = False
@@ -109,8 +135,7 @@ def main():
         out = processPixel(out, patfile) # Convert each value into the color needed
 
         # Output each section of the array on individual lines
-        for x in out:
-            print(x)
+        printImage(out)
     else:
         print("Not a valid file format! Please use a Pixel Console Image file (.pci)")
 
