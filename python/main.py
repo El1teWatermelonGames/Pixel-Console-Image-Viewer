@@ -1,46 +1,51 @@
-from colorama import init, Back
-init()
+from os import name, system
 
 # Uses hexadecimal color system (16 colors to pick from)
 
 # 0 | BLACK
-# 1 | BLUE
-# 2 | CYAN
-# 3 | GREEN
-# 4 | MAGENTA
-# 5 | RED
-# 6 | WHITE
-# 7 | YELLOW
-# 8 | LIGHT BLACK
-# 9 | LIGHT BLUE
-# A | LIGHT CYAN
-# B | LIGHT GREEN
-# C | LIGHT YELLOW
-# D | LIGHT RED
-# E | LIGHT MAGENTA
-# F | LIGHT WHITE
+# 1 | RED
+# 2 | GREEN
+# 3 | YELLOW
+# 4 | BLUE
+# 5 | MAGENTA
+# 6 | CYAN
+# 7 | WHITE
+# 8 | BRIGHT BLACK
+# 9 | BRIGHT RED
+# A | BRIGHT GREEN
+# B | BRIGHT YELLOW
+# C | BRIGHT BLUE
+# D | BRIGHT MAGENTA
+# E | BRIGHT CYAN
+# F | BRIGHT WHITE
 
 # ----- Data -----
-CEND = Back.RESET
+CEND = "\u001b[0m"
 
-CBLACK = Back.BLACK
-CBLUE = Back.BLUE
-CCYAN = Back.CYAN
-CGREEN = Back.GREEN
-CMAGENTA = Back.MAGENTA
-CRED = Back.RED
-CWHITE = Back.WHITE
-CYELLOW = Back.YELLOW
-CLBLACK = Back.LIGHTBLACK_EX
-CLBLUE = Back.LIGHTBLUE_EX
-CLCYAN = Back.LIGHTCYAN_EX
-CLGREEN = Back.LIGHTGREEN_EX
-CLYELLOW = Back.LIGHTYELLOW_EX
-CLRED = Back.LIGHTRED_EX
-CLMAGENTA = Back.LIGHTMAGENTA_EX
-CLWHITE = Back.LIGHTWHITE_EX
+CBLACK = "\u001b[40m"
+CRED = "\u001b[41m"
+CGREEN = "\u001b[42m" 
+CYELLOW = "\u001b[43m"
+CBLUE = "\u001b[44m"
+CMAGENTA = "\u001b[45m"
+CCYAN = "\u001b[46m"
+CWHITE = "\u001b[47m"
+CBBLACK = "\u001b[40;1m"
+CBRED = "\u001b[41;1m"
+CBGREEN = "\u001b[42;1m"
+CBYELLOW = "\u001b[43;1m"
+CBBLUE = "\u001b[44;1m"
+CBMAGENTA = "\u001b[45;1m"
+CBCYAN = "\u001b[46;1m"
+CBWHITE = "\u001b[47;1m"
 
 # ----- Process -----
+
+def clearConsole():
+    if name == "nt":
+        system("cls")
+    else:
+        system("clear")
 
 def processLines(image):
     image = open(image, 'r')
@@ -64,21 +69,21 @@ def processPixel(data, patfile):
 def appendPixel(char, outChar):
     out = ""
     if char == "0": out = CBLACK
-    elif char == "1": out = CBLUE
-    elif char == "2": out = CCYAN
-    elif char == "3": out = CGREEN
-    elif char == "4": out = CMAGENTA
-    elif char == "5": out = CRED
-    elif char == "6": out = CWHITE
-    elif char == "7": out = CYELLOW
-    elif char == "8": out = CLBLACK
-    elif char == "9": out = CLBLUE
-    elif char == "A": out = CLCYAN
-    elif char == "B": out = CLGREEN
-    elif char == "C": out = CLYELLOW
-    elif char == "D": out = CLRED
-    elif char == "E": out = CLMAGENTA
-    elif char == "F": out = CLWHITE
+    elif char == "1": out = CRED
+    elif char == "2": out = CGREEN
+    elif char == "3": out = CYELLOW
+    elif char == "4": out = CBLUE
+    elif char == "5": out = CMAGENTA
+    elif char == "6": out = CCYAN
+    elif char == "7": out = CWHITE
+    elif char == "8": out = CBBLACK
+    elif char == "9": out = CBRED
+    elif char == "A": out = CBGREEN
+    elif char == "B": out = CBYELLOW
+    elif char == "C": out = CBBLUE
+    elif char == "D": out = CBMAGENTA
+    elif char == "E": out = CBCYAN
+    elif char == "F": out = CBWHITE
     elif char == " ": return "   "
     else:
         print(f"Invalid char in image file: {char}")
