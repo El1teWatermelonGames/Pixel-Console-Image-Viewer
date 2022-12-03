@@ -1,5 +1,7 @@
 from os import name, system
 
+system("") # init terminal
+
 # Uses hexadecimal color system (16 colors to pick from)
 
 # 0 | BLACK
