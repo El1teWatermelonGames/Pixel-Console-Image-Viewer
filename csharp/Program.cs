@@ -2,10 +2,14 @@
 {
     class Program
     {
-        static void processLines(string filepath)
+        static List<string> processLines(string filepath)
         {
             string rawData = File.ReadAllText(filepath);
             List<string> data = new List<string>();
+            foreach (string line in rawData.Split(new[] { '\n' })){
+                data.Add(line);
+            }
+            return data;
         }
 
         static void Main(string[] args)
@@ -24,15 +28,16 @@
                 }
 
                 // Process the data functions
-
+                output = processLines(filepath);
 
                 // Output each section of the array on an individual line
+                Console.Clear();
                 for (int i=0; i < output.Count; i++)
                 {
                     Console.WriteLine(output[i]);
                 }
-                Console.WriteLine("Press enter to exit...");
-                Console.ReadLine();
+                Console.WriteLine("Press any key to exit...");
+                Console.ReadKey();
             }
             else
             {
