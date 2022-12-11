@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33110.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cs", "cs.csproj", "{00F950CD-DDFF-4E55-9491-9B449B34586C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E510B51E-43E3-4F73-BD0C-56B776C70383}"
+	ProjectSection(SolutionItems) = preProject
+		colorPalatte.pci = colorPalatte.pci
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{00F950CD-DDFF-4E55-9491-9B449B34586C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00F950CD-DDFF-4E55-9491-9B449B34586C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00F950CD-DDFF-4E55-9491-9B449B34586C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00F950CD-DDFF-4E55-9491-9B449B34586C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3781BB4E-5774-46F0-9FB3-7BF76B1D1427}
+	EndGlobalSection
+EndGlobal

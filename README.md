@@ -30,6 +30,7 @@ To render an image place the .pci file inside the same directory as the renderer
 
 ## All versions of the program
 
-### Planned: C++, Rust
-### In Development: C#
-### Stable Version: Python
+- Python: Stable | Windows, Linux & Mac
+- C#: Stable | Windows
+- C++: In Progress | Linux
+- Rust: Not Started
