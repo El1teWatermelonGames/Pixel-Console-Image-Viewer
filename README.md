@@ -31,6 +31,6 @@ To render an image place the .pci file inside the same directory as the renderer
 ## All versions of the program
 
 - Python: Stable | Windows, Linux & Mac
-- C#: Stable | Windows
+- C#: Stable | Windows | Features Image Creator built into the terminal
 - C++: In Progress | Linux
 - Rust: Not Started
