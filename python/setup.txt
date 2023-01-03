@@ -1,0 +1,6 @@
+To setup PCI-RE (Pixel Console Image - Renderer Editor):
+
+1. Install Python 3 with pip
+2. Run the console command "pip install -r requirements.txt"
+
+All done!

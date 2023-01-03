@@ -1,7 +1,26 @@
-﻿namespace cs
+﻿using System;
+using System.Runtime.InteropServices;
+
+namespace cs
 {
     class Program
     {
+        private const int STD_OUTPUT_HANDLE = -11;
+        private const uint ENABLE_VIRTUAL_TERMINAL_PROCESSING = 0x0004;
+        private const uint DISABLE_NEWLINE_AUTO_RETURN = 0x0008;
+
+        [DllImport("kernel32.dll")]
+        private static extern bool GetConsoleMode(IntPtr hConsoleHandle, out uint lpMode);
+
+        [DllImport("kernel32.dll")]
+        private static extern bool SetConsoleMode(IntPtr hConsoleHandle, uint dwMode);
+
+        [DllImport("kernel32.dll", SetLastError = true)]
+        private static extern IntPtr GetStdHandle(int nStdHandle);
+
+        [DllImport("kernel32.dll")]
+        public static extern uint GetLastError();
+
         public static List<string> splashscreen = new List<string> {
             "FFF000FFF00FFF",
             "F0F00F000000F0",
@@ -53,6 +72,50 @@
             foreach (string line in Image)
             {
                 Console.WriteLine(line);
+            }
+        }
+
+        static void renderImage(List<string> image, bool pat)
+        {
+            debugOut($"Rendering Image");
+            debugOut($"Image has {image.Count} line(s)");
+
+            for (int i=0; i > image.Count; i++){
+                debugOut("is this running?");
+                string line = image[i];
+                debugOut($"Current line: {line}");
+                for (int j=0; j > line.Length; i++){
+                    string character = line[j].ToString();
+                    debugOut($"Current char: {character}");
+
+                    if (character == "0") Console.BackgroundColor = ConsoleColor.Black;
+                    else if (character == "1") Console.BackgroundColor = ConsoleColor.DarkRed;
+                    else if (character == "2") Console.BackgroundColor = ConsoleColor.DarkGreen;
+                    else if (character == "3") Console.BackgroundColor = ConsoleColor.DarkYellow;
+                    else if (character == "4") Console.BackgroundColor = ConsoleColor.DarkBlue;
+                    else if (character == "5") Console.BackgroundColor = ConsoleColor.DarkMagenta;
+                    else if (character == "6") Console.BackgroundColor = ConsoleColor.DarkCyan;
+                    else if (character == "7") Console.BackgroundColor = ConsoleColor.White;
+                    else if (character == "8") Console.BackgroundColor = ConsoleColor.DarkGray;
+                    else if (character == "9") Console.BackgroundColor = ConsoleColor.Red;
+                    else if (character == "A") Console.BackgroundColor = ConsoleColor.Green;
+                    else if (character == "B") Console.BackgroundColor = ConsoleColor.Yellow;
+                    else if (character == "C") Console.BackgroundColor = ConsoleColor.Blue;
+                    else if (character == "D") Console.BackgroundColor = ConsoleColor.Magenta;
+                    else if (character == "E") Console.BackgroundColor = ConsoleColor.Cyan;
+                    else if (character == "F") Console.BackgroundColor = ConsoleColor.Gray;
+                    else 
+                    {
+                        Console.WriteLine($"Image contains invalid character: {character}");
+                        Environment.Exit(1);
+                    }
+
+                    if(pat) Console.Write($"{character} ");
+                    else Console.Write("  ");
+
+                    Console.ResetColor();
+                }
+                Console.WriteLine();
             }
         }
 
@@ -263,6 +326,22 @@
 
         static void Main(string[] args)
         {
+            var iStdOut = GetStdHandle(STD_OUTPUT_HANDLE);
+            if (!GetConsoleMode(iStdOut, out uint outConsoleMode))
+            {
+                Console.WriteLine("failed to get output console mode");
+                Console.ReadKey();
+                return;
+            }
+
+            outConsoleMode |= ENABLE_VIRTUAL_TERMINAL_PROCESSING | DISABLE_NEWLINE_AUTO_RETURN;
+            if (!SetConsoleMode(iStdOut, outConsoleMode))
+            {
+                Console.WriteLine($"failed to set output console mode, error code: {GetLastError()}");
+                Console.ReadKey();
+                return;
+            }
+
             bool pat = false;
             List<string> output = new List<string>();
             bool splash = true;
@@ -323,9 +402,7 @@
                 debugOut("args length 1 & ends with .pci");
 
                 output = processLines(args[0]);
-                output = processPixel(output, pat);
-
-                printImage(output);
+                output = processPixel(output, false);
             }
 
             else if (args.Length == 1 && args[0] == "editor")

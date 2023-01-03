@@ -1,4 +1,5 @@
-build:
-	g++ -o pixel-console-renderer main.cpp
-clean:
-	$(RM) pixel-console-renderer
+linux:
+	g++ -o pci linux.cpp
+
+win:
+	g++ -o pci.exe windows.cpp

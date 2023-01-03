@@ -1,0 +1,6 @@
+To setup PCI(E) (Pixel Console Image Editor):
+
+1. Install Python 3 with pip
+2. Run the console command "pip install -r requirements.txt"
+
+All done!
